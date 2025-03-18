@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -49,18 +50,14 @@
         android:layout_width="377dp"
         android:layout_height="307dp"
         android:layout_marginTop="1dp"
-        android:text="«Борисоглебский техникум промышленных и информационных технологий» (ГБПОУ ВО «БТПИТ») — государственное бюджетное профессиональное образовательное учреждение Воронежской области.  13
-
+        android:text="«Борисоглебский техникум промышленных и информационных технологий» (ГБПОУ ВО «БТПИТ») — государственное бюджетное профессиональное образовательное учреждение Воронежской области.13
 Некоторые специальности, которые предлагает техникум:
-
 44.02.01 — Дошкольное образование, квалификация — воспитатель детей дошкольного возраста; 3
 44.02.05 — Коррекционная педагогика в начальном образовании, квалификация — учитель начальных классов; 3
 38.02.01 — Экономика и бухгалтерский учёт (по отраслям), квалификации — бухгалтер, специалист по налогообложению, кассир, техник; 3
 09.02.01 — Компьютерные системы и комплексы, квалификации — техник по компьютерным сетям и системам, системный администратор. 3
 Адрес: ул. Третьяковская, д. 14, Борисоглебск. 35
-
 Телефоны: 8 (47354) 6-05-73, 8 (47354) 6-06-98. 5
-
 E-mail: btpit@govvrn.ru. 5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
@@ -83,8 +80,8 @@ E-mail: btpit@govvrn.ru. 5"
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/like_comment_share"
-        android:layout_width="376dp"
-        android:layout_height="52dp"
+        android:layout_width="413dp"
+        android:layout_height="48dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="220dp"
         android:orientation="horizontal"
@@ -97,9 +94,9 @@ E-mail: btpit@govvrn.ru. 5"
 
 
         <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:id="@+id/LikeButton"
+            android:layout_width="46dp"
+            android:layout_height="51dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="5dp"
             android:background="@android:color/transparent"
@@ -107,14 +104,15 @@ E-mail: btpit@govvrn.ru. 5"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView6"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/like"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="DuplicateIds,TouchTargetSizeCheck" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/ProsmotrButton"
             android:layout_width="52dp"
             android:layout_height="0dp"
             android:layout_marginEnd="8dp"
@@ -127,16 +125,18 @@ E-mail: btpit@govvrn.ru. 5"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/shareButton"
             android:layout_width="40dp"
             android:layout_height="0dp"
+            android:layout_marginEnd="92dp"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton5"
-            app:layout_constraintHorizontal_bias="0.517"
-            app:layout_constraintStart_toEndOf="@+id/imageButton3"
+            app:layout_constraintEnd_toStartOf="@+id/ProsmotrButton"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/LikeButton"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/podelica"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
@@ -147,7 +147,7 @@ E-mail: btpit@govvrn.ru. 5"
             android:layout_marginStart="48dp"
             android:text="0"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/imageButton4"
+            app:layout_constraintStart_toStartOf="@+id/shareButton"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -168,7 +168,7 @@ E-mail: btpit@govvrn.ru. 5"
             android:text="0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageButton3"
+            app:layout_constraintStart_toEndOf="@id/LikeButton"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
