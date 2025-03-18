@@ -6,7 +6,7 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
 
     <TextView
@@ -22,7 +22,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/username"
+        android:id="@+id/author"
         android:layout_width="318dp"
         android:layout_height="41dp"
         android:layout_marginEnd="32dp"
@@ -34,19 +34,19 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/time"
+        android:id="@+id/publish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="21 мая в 18:36"
-        app:layout_constraintBottom_toTopOf="@+id/post_text"
+        app:layout_constraintBottom_toTopOf="@+id/content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.212"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/author"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/post_text"
+        android:id="@+id/content"
         android:layout_width="377dp"
         android:layout_height="307dp"
         android:layout_marginTop="1dp"
@@ -62,7 +62,7 @@ E-mail: btpit@govvrn.ru. 5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/publish"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -75,7 +75,7 @@ E-mail: btpit@govvrn.ru. 5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/post_text"
+        app:layout_constraintTop_toBottomOf="@+id/content"
         tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -94,7 +94,7 @@ E-mail: btpit@govvrn.ru. 5"
 
 
         <ImageButton
-            android:id="@+id/LikeButton"
+            android:id="@+id/like"
             android:layout_width="46dp"
             android:layout_height="51dp"
             android:layout_marginStart="16dp"
@@ -103,7 +103,7 @@ E-mail: btpit@govvrn.ru. 5"
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView6"
+            app:layout_constraintEnd_toStartOf="@+id/likecol"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -134,7 +134,7 @@ E-mail: btpit@govvrn.ru. 5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/ProsmotrButton"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/LikeButton"
+            app:layout_constraintStart_toEndOf="@+id/like"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/podelica"
@@ -161,14 +161,14 @@ E-mail: btpit@govvrn.ru. 5"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/likecol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="302dp"
             android:text="0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/LikeButton"
+            app:layout_constraintStart_toEndOf="@id/like"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -180,8 +180,8 @@ E-mail: btpit@govvrn.ru. 5"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="11dp"
         android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/post_text"
-        app:layout_constraintEnd_toStartOf="@+id/username"
+        app:layout_constraintBottom_toTopOf="@+id/content"
+        app:layout_constraintEnd_toStartOf="@+id/author"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
