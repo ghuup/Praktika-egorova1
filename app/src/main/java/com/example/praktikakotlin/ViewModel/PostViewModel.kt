@@ -7,7 +7,8 @@ import com.example.praktikakotlin.Repository.PostRepositpry
 class PostViewModel: ViewModel() {
    
         private val repositpry: PostRepositpry = PostRepositoryInMemoryImpl()
-        val data = repositpry.get()
-        fun like() = repositpry.like()
+        val data = repositpry.getAll()
+        fun likeById(id: Long) = repositpry.likeById(id)
+        fun repostById(id: Long) = repositpry.repostById(id)
        
 }
