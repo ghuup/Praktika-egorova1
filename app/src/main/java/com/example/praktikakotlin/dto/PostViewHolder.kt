@@ -1,13 +1,18 @@
-package com.example.praktikakotlin
+package com.example.praktikakotlin.dto
 
+import androidx.appcompat.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
+import com.example.praktikakotlin.OnInteractionListener
+import com.example.praktikakotlin.R
 import com.example.praktikakotlin.databinding.ActivityPostCardBinding
-import com.example.praktikakotlin.dto.Post
 
 
-class PostViewHolder(private val binding: ActivityPostCardBinding,
-                     private val onLikelistener: OnLikeListener,
-                     private  val onrepostlistener: OnRepostListener) : RecyclerView.ViewHolder(binding.root) {
+class PostViewHolder(
+    private val binding: ActivityPostCardBinding,
+    private val onLikelistener: OnLikeListener,
+    private val onrepostlistener: OnRepostListener,
+    private val  onInteractionListener: OnInteractionListener,
+) : RecyclerView.ViewHolder(binding.root) {
     fun bind(post: Post) {
         binding.apply {
             author.text = post.author
@@ -30,7 +35,31 @@ class PostViewHolder(private val binding: ActivityPostCardBinding,
                 textView5.text = formatCount(post.repost)
                 onrepostlistener(post)
             }
+
+
+
+            menu.setOnClickListener {
+                PopupMenu(it.context, it).apply {
+                    inflate(R.menu.menu_option)
+                    setOnMenuItemClickListener { item ->
+                        when (item.itemId){
+                            R.id.remove -> {
+                                onInteractionListener.onRemove(post)
+                                true
+                            }
+                            R.id.edit -> {
+                                onInteractionListener.onEdit(post)
+                                true
+                            }
+                            else -> false
+                        }
+                    }
+                }.show()
+            }
         }
+
+
+
     }
     fun formatCount(count: Int): String {
         return when {
@@ -38,5 +67,9 @@ class PostViewHolder(private val binding: ActivityPostCardBinding,
             count >= 1_000 -> String.format("%.1fK", count / 1_000.0)
             else -> count.toString()
         }
+
     }
+
+
+
 }

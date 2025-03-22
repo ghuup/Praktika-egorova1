@@ -1,7 +1,6 @@
-package com.example.praktikakotlin
+package com.example.praktikakotlin.dto
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.praktikakotlin.dto.Post
 
 class PostDiffCallback : DiffUtil.ItemCallback<Post> ()
 {
