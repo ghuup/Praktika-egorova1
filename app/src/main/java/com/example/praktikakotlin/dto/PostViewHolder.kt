@@ -20,9 +20,7 @@ class PostViewHolder(
             textView5.text = formatCount(post.repost)
             content.text = post.content
             likecol.text =  formatCount(post.likes)
-            like.setImageResource(
-                if (post.likeByMe) R.drawable.dislike else R.drawable.like
-            )
+            like.isChecked = post.likeByMe
             like.setOnClickListener {
                 if (post.likeByMe) {
                     likecol.text = formatCount(post.likes)

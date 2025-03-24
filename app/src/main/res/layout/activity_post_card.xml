@@ -89,22 +89,20 @@ E-mail: btpit@govvrn.ru. 5"
         tools:ignore="MissingConstraints">
 
 
-        <ImageButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/like"
-            android:layout_width="46dp"
+            android:layout_width="59dp"
             android:layout_height="51dp"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="5dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/likecol"
-            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            app:icon="@drawable/like"
+            android:checkable="true"
+            android:contentDescription="Like"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/like"
-            tools:ignore="DuplicateIds,TouchTargetSizeCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/link_text"
+            tools:ignore="NotSibling"
+            style="@style/Widget.AppTheme.LikeCheckBox"/>
 
         <ImageButton
             android:id="@+id/ProsmotrButton"

@@ -32,6 +32,8 @@ class PostsAdapter(
     ) {
         holder.bind(getItem(position))
     }
+
+
 }
 
 
