@@ -25,59 +25,23 @@
 
     </androidx.constraintlayout.widget.Barrier>
 
-    <EditText
-
-        android:id="@+id/content"
-        android:layout_width="411dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="8dp"
-        android:autofillHints="Подсказка"
-        android:background="@color/white"
-        android:importantForAccessibility="no"
-        android:inputType="textMultiLine"
-        android:padding="@dimen/cardview_compat_inset_shadow"
-        app:layout_constraintBottom_toBottomOf="@+id/container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="414dp"
-        android:visibility="invisible"
-        android:background="@color/white"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
 
 
-        <Button
-            android:id="@+id/cancelButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Отменить" />
-
-        <TextView
-            android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ваше сообщение" />
 
 
-    </LinearLayout>
-
-    <ImageButton
-        android:id="@+id/save"
-        android:layout_width="41dp"
-        android:layout_height="42dp"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:contentDescription="@string/app_name"
+        android:padding="4dp"
+        android:src="@drawable/laik"
+        app:backgroundTint="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.956"
-        app:layout_constraintStart_toStartOf="@+id/content"
-        app:layout_constraintTop_toTopOf="@+id/content"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        app:tint="@color/white"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

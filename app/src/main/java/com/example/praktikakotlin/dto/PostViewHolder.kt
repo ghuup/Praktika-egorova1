@@ -1,9 +1,10 @@
 package com.example.praktikakotlin.dto
 
+import android.view.View
 import androidx.appcompat.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
-import com.example.praktikakotlin.OnInteractionListener
 import com.example.praktikakotlin.R
+import com.example.praktikakotlin.Repository.OnInteractionListener
 import com.example.praktikakotlin.databinding.ActivityPostCardBinding
 
 
@@ -21,6 +22,16 @@ class PostViewHolder(
             content.text = post.content
             likecol.text =  formatCount(post.likes)
             like.isChecked = post.likeByMe
+
+
+            if (post.video == null){
+                videoView.visibility = View.GONE
+                playBtn.visibility = View.GONE
+            }
+            playBtn.setOnClickListener{
+                post.video?.let { it1 -> videoView.loadUrl(it1) }
+            }
+
             like.setOnClickListener {
                 if (post.likeByMe) {
                     likecol.text = formatCount(post.likes)
@@ -29,11 +40,11 @@ class PostViewHolder(
                 }
                 onLikelistener(post)
             }
+
             shareButton.setOnClickListener {
                 textView5.text = formatCount(post.repost)
                 onrepostlistener(post)
             }
-
 
 
             menu.setOnClickListener {

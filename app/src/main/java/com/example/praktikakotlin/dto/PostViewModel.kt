@@ -12,6 +12,7 @@ class PostViewModel: ViewModel() {
         val data = repositpry.getAll()
 
 
+
         private  val  empty = Post(
                 id = 0,
                 content = "",
@@ -20,6 +21,7 @@ class PostViewModel: ViewModel() {
                 publish = "",
                 likes = 0,
                 repost = 0,
+                video = ""
         )
 
         val edited = MutableLiveData(empty)
@@ -42,6 +44,18 @@ class PostViewModel: ViewModel() {
                         edited.value = edited.value?.copy(content = text)
 
         }
+
+        fun changeContentAndSave(content: String) {
+                val text = content.trim()
+                if (edited.value?.content == text) {
+                        return
+                }
+                edited.value?.let {
+                        repositpry.save(it.copy(content = text))
+                }
+                edited.value = empty
+        }
+
         fun likeById(id: Long) = repositpry.likeById(id)
         fun repostById(id: Long) = repositpry.repostById(id)
         fun removeById(id: Long) = repositpry.removeById(id)

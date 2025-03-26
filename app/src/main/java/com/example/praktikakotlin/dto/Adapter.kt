@@ -3,17 +3,19 @@ package com.example.praktikakotlin.dto
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
-import com.example.praktikakotlin.OnInteractionListener
+
+import com.example.praktikakotlin.Repository.OnInteractionListener
 import com.example.praktikakotlin.databinding.ActivityPostCardBinding
 
 typealias  OnLikeListener = (post: Post) -> Unit
 typealias  OnRepostListener = (post: Post) -> Unit
-typealias  OnRemoveListener = (post: Post) -> Unit
+typealias  onShareListener = (post: Post) -> Unit
 
 class PostsAdapter(
     private val onLikeListener: OnLikeListener,
     private val onRepostListener: OnRepostListener,
     private val onInteractionListener: OnInteractionListener,
+
 
     ) : ListAdapter<Post, PostViewHolder>(PostDiffCallback()){
 

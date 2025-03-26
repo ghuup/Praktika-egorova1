@@ -1,7 +1,10 @@
 package com.example.praktikakotlin.Repository
 
+import android.content.Intent
+import android.provider.Settings.Global.getString
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.example.praktikakotlin.R
 import com.example.praktikakotlin.dto.Post
 
 
@@ -14,7 +17,8 @@ class PostRepositoryInMemoryImpl: PostRepositpry {
         content = "«Борисоглебский техникум промышленных и информационных технологий» (ГБПОУ ВО «БТПИТ») — государственное бюджетное профессиональное образовательное учреждение Воронежской области.13 Некоторые специальности, которые предлагает техникум:44.02.01 — Дошкольное образование, квалификация — воспитатель детей дошкольного возраста; 344.02.05 — Коррекционная педагогика в начальном образовании, квалификация — учитель начальных классов; 338.02.01 — Экономика и бухгалтерский учёт (по отраслям), квалификации — бухгалтер, специалист по налогообложению, кассир, техник; 309.02.01 — Компьютерные системы и комплексы, квалификации — техник по компьютерным сетям и системам, системный администратор.",
         publish = "21 мая в 18:36",
         likeByMe = false,
-        repost = 42432, likes = 324
+        repost = 42432, likes = 324,
+            video = "https://yandex.ru/video/preview/18148133030246839781"
     ),
         Post(
             id = 2,
@@ -23,7 +27,8 @@ class PostRepositoryInMemoryImpl: PostRepositpry {
             publish = "23 мая в 12:16",
             likeByMe = false,
             repost = 424,
-            likes = 4226
+            likes = 4226,
+            video = "https://yandex.ru/video/preview/18148133030246839781"
         ),
     )
 
@@ -72,6 +77,8 @@ class PostRepositoryInMemoryImpl: PostRepositpry {
     }
         data.value = posts
     }
+
+
 
 }
 
