@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    tools:context=".Activity.MainActivity">
+    tools:context=".Activity.FeedFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/container"
@@ -26,9 +26,6 @@
     </androidx.constraintlayout.widget.Barrier>
 
 
-
-
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="50dp"
@@ -41,6 +38,10 @@
         app:backgroundTint="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:tint="@color/white"
         tools:ignore="MissingConstraints" />
 

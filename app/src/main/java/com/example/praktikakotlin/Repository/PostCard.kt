@@ -1,4 +1,4 @@
-package com.example.praktikakotlin.Activity
+package com.example.praktikakotlin.Repository
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

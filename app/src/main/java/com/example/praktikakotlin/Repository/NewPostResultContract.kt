@@ -1,15 +1,15 @@
-package com.example.praktikakotlin.Activity
+package com.example.praktikakotlin.Repository
 
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import androidx.activity.result.contract.ActivityResultContract
-import com.example.praktikakotlin.new_post_activity
+import com.example.praktikakotlin.Activity.NewPostFragment
 
 class NewPostResultContract: ActivityResultContract<String?, String?>() {
 
     override fun createIntent(context: Context, input: String?): Intent =
-        Intent(context, new_post_activity::class.java).putExtra(Intent.EXTRA_TEXT, input)
+        Intent(context, NewPostFragment::class.java).putExtra(Intent.EXTRA_TEXT, input)
 
 
     override fun parseResult(resultCode: Int, intent: Intent?): String? =

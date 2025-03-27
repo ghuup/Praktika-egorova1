@@ -1,4 +1,4 @@
-package com.example.praktikakotlin.Activity
+package com.example.praktikakotlin.Repository
 
 import android.content.Intent
 import android.os.Bundle

@@ -41,7 +41,7 @@ class PostViewHolder(
                 onLikelistener(post)
             }
 
-            shareButton.setOnClickListener {
+            share.setOnClickListener {
                 textView5.text = formatCount(post.repost)
                 onrepostlistener(post)
             }
@@ -64,6 +64,13 @@ class PostViewHolder(
                         }
                     }
                 }.show()
+            }
+            like.setOnClickListener {
+                onInteractionListener.onLike(post)
+            }
+
+            share.setOnClickListener {
+                onInteractionListener.onShare(post)
             }
         }
 
