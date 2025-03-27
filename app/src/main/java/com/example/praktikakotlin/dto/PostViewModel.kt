@@ -20,8 +20,6 @@ class PostViewModel(application: Application): AndroidViewModel(application){
         private val repositpry: PostRepositpry = PostRepositoryFileImpl(application)
         val data = repositpry.getAll()
 
-
-
         val edited = MutableLiveData(empty)
 
         fun save(){
@@ -34,7 +32,6 @@ class PostViewModel(application: Application): AndroidViewModel(application){
                 edit(post: Post){
                 edited.value = post
         }
-
 
         fun changeContentAndSave(content: String) {
                 val text = content.trim()
